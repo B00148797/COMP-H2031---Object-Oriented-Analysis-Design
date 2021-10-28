@@ -1,0 +1,35 @@
+@startuml
+
+title __PACKAGEJAVA's Class Diagram__\n
+    class Main {
+    }
+
+
+    namespace ubdevs {
+      class dubdevs.Video {
+      }
+    }
+
+
+    namespace etflix {
+      class netflix.Video {
+      }
+    }
+
+
+    namespace udublin {
+      class tudublin.Programme {
+      }
+    }
+
+
+    namespace udublin {
+      class tudublin.Student {
+      }
+    }
+
+  
+
+  tudublin.Student o-- tudublin.Programme : programme
+
+@enduml

@@ -1,0 +1,57 @@
+@startuml
+
+title __SRC's Class Diagram__\n
+
+    class Main {
+        {static} + main()
+    }
+
+    class netflix.Video {
+              - contentCategory : Integer
+              - netflixId : Integer
+              + Video()
+              + getContentCategory()
+              + getNetflixId()
+              + setContentCategory()
+              + setNetflixId()
+              + toString()
+          }
+    class dubdevs.Video {
+                        - format : String
+                        - sizeMegabtyes : Integer
+                        + Video()
+                        + getFormat()
+                        + getSizeMegabtyes()
+                        + setFormat()
+                        + setSizeMegabtyes()
+                        + toString()
+                    }
+
+          class tudublin.Programme {
+                    - level : Integer
+                    - name : String
+                    + Programme()
+                    + getLevel()
+                    + getName()
+                    + setLevel()
+                    + setName()
+                    + toString()
+                }
+
+                class tudublin.Student {
+                    - name : String
+                    + Student()
+                    + getName()
+                    + getProgramme()
+                    + setName()
+                    + setProgramme()
+                    + toString()
+                }
+
+          tudublin.Student o-- tudublin.Programme : programme
+
+
+
+
+
+@enduml

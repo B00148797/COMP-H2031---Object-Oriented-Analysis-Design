@@ -1,0 +1,128 @@
+@startuml
+
+title __SRC's Class Diagram_
+
+    class BankAccount {
+        + balence : double
+        + BankAccount()
+    }
+
+    class Book {
+        + price : Double
+        + title : String
+        + Book()
+        + getPrice()
+        + getTitle()
+        + setPrice()
+        + setTitle()
+        + toString()
+    }
+
+    class Car {
+        - color : Color
+        + Car()
+        + getColor()
+        + setColor()
+    }
+
+    class Dessert {
+        + name : String
+        + Dessert()
+        + Dessert()
+        + toString()
+    }
+
+    enum DietType {
+      CARNIVORE
+      VEGAN
+      VEGETARIAN
+    }
+
+    class Dog {
+        - age : int
+        - breed : String
+        - color : String
+        + Dog()
+        + getAge()
+        + getBreed()
+        + getColor()
+        + setAge()
+        + setBreed()
+        + setColor()
+    }
+
+    class Food {
+        - name : String
+        + Food()
+        + getFreshness()
+        + getName()
+        + setFreshness()
+        + setName()
+        + toString()
+    }
+
+    enum FreshType {
+      FRESH
+      OUT_OF_DATE
+      SELL_TODAY
+    }
+
+    class Main {
+        {static} + main()
+    }
+
+    class Module {
+        + title : String
+        + Module()
+        + Module()
+        + getTitle()
+        + setTitle()
+        + toString()
+    }
+
+    class MyMaths {
+        {static} ~ add()
+    }
+
+    class Person {
+        + fullTime : Boolean
+        + id : Integer
+        + Person()
+        + getFullTime()
+        + getId()
+        + setFullTime()
+        + setId()
+        + toString()
+    }
+
+    class Pet {
+        + age : Integer
+        + name : String
+        + type : String
+        + Pet()
+        + Pet()
+        + getAge()
+        + getName()
+        + getType()
+        + setAge()
+        + setName()
+        + setType()
+        + toString()
+    }
+
+    class Student {
+        + firstName : String
+        + gpa : double
+        + surname : String
+        + Student()
+        + Student()
+        + toString()
+    }
+  
+
+  Dessert o-- Dessert.DietType : diet
+  Dessert +-down- Dessert.DietType
+  Food o-- FreshType : freshness
+
+
+@enduml

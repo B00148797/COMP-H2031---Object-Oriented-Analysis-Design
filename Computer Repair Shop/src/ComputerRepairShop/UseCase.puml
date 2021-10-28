@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+skinparam actorStyle awesome
+
+package Shop {
+    :Seller: as Seller
+}
+
+package Bank {
+    :Account: as (Account)
+}
+
+package Customer {
+    :Buyer: as Buyer
+}
+
+
+
+
+(Service list) -> Shop
+(Service list) -> Buyer
+Seller -> Buyer
+(Account) -> Buyer
+Buyer -> (Account)
+
+(Account) -> Shop
+Shop -> (Account)
+
+@enduml

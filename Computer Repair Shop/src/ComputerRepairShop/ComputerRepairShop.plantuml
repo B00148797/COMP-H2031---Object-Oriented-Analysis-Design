@@ -1,0 +1,69 @@
+@startuml
+
+title __COMPUTERREPAIRSHOP's Class Diagram__\n
+
+  namespace ComputerRepairShop {
+    class ComputerRepairShop.Customer {
+        - mailAddress : String
+        - money : Integer
+        - name : String
+        - phoneNumber : String
+        + Customer()
+        + getMailAddress()
+        + getMoney()
+        + getName()
+        + getPhoneNumber()
+        + getServiceNeed()
+        + setMailAddress()
+        + setMoney()
+        + setName()
+        + setPhoneNumber()
+        + setServiceNeed()
+        + toString()
+    }
+  }
+  
+
+  namespace ComputerRepairShop {
+    class ComputerRepairShop.Main {
+        {static} + main()
+    }
+  }
+  
+
+  namespace ComputerRepairShop {
+    enum Service {
+      BOOK_IN_LAPTOP_FOR_VIRUS_REMOVAL
+      BUY_A_SECOND_HAND_COMPUTER
+      DOWNLOAD_SOFTWARE_TO_PERFORM_AN_AUDIT
+      price
+    }
+  }
+  
+
+  namespace ComputerRepairShop {
+    class ComputerRepairShop.Shop {
+        + services : Service[]
+        - activity : String
+        - name : String
+        - numberEmploy : Integer
+        - theHeadOffice : String
+        + Shop()
+        + canBeOfService()
+        + getActivity()
+        + getName()
+        + getNumberEmploy()
+        + getService()
+        + getTheHeadOffice()
+        + setActivity()
+        + setName()
+        + setNumberEmploy()
+        + setTheHeadOffice()
+        + toString()
+    }
+  }
+  
+
+  ComputerRepairShop.Customer o-- ComputerRepairShop.Service : serviceNeed
+
+@enduml

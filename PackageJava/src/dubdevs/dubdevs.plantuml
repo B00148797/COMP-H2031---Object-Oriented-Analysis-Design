@@ -1,0 +1,16 @@
+@startuml
+
+title __DUBDEVS's Class Diagram__\n
+
+      class dubdevs.Video {
+          - format : String
+          - sizeMegabtyes : Integer
+          + Video()
+          + getFormat()
+          + getSizeMegabtyes()
+          + setFormat()
+          + setSizeMegabtyes()
+          + toString()
+      }
+
+@enduml

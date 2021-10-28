@@ -1,0 +1,29 @@
+@startuml
+
+title __TUDUBLIN's Class Diagram__\n
+
+      class tudublin.Programme {
+          - level : Integer
+          - name : String
+          + Programme()
+          + getLevel()
+          + getName()
+          + setLevel()
+          + setName()
+          + toString()
+      }
+
+      class tudublin.Student {
+          - name : String
+          + Student()
+          + getName()
+          + getProgramme()
+          + setName()
+          + setProgramme()
+          + toString()
+      }
+
+  tudublin.Student o-- tudublin.Programme : programme
+
+
+@enduml

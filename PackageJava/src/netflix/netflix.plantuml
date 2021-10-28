@@ -1,0 +1,16 @@
+@startuml
+
+title __NETFLIX's Class Diagram__\n
+
+      class netflix.Video {
+          - contentCategory : Integer
+          - netflixId : Integer
+          + Video()
+          + getContentCategory()
+          + getNetflixId()
+          + setContentCategory()
+          + setNetflixId()
+          + toString()
+      }
+
+@enduml
