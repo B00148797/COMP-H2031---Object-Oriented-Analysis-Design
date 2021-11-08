@@ -1,5 +1,5 @@
 public class Main {
-    
+
     public static void main(String[] args) {
 
         MainDish mainDish = new MainDish("Boiled Egg", 260);
